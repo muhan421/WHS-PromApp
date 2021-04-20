@@ -1,0 +1,88 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bubblegum+Sans" />
+
+<link rel="stylesheet" type="text/css" href="styles/capture.css">
+<link rel="stylesheet" type="text/css" href="styles/styles.css"> <!-- link to CSS -->
+
+
+
+</head>
+<body>
+<div class="main_container">
+    <div class="header">
+        <div class="logo">
+            <img class="logo" src="images/underthestars_logo.png" />
+        </div>
+        <div class="topnav">
+            <a href="index.html"><div class="nav_button">Home</div></a>
+            <a href="edit.html"><div class="nav_button">Add Student</div></a>
+            <a href="database.html"><div class="nav_button">Search Database</div></a>
+                
+        </div>
+        </div>
+        <div class="single_col">
+        
+            <img class ="Pirate"src="images/pirate_logo.png" width="100%" alt="Pirate Logo" style="float: right; max-width: 250px; margin: 15px;"/>
+            <h2>First Name</h2>
+
+    <input type="text" id="firstInput"><br>
+
+  <h2>Last Name</h2>
+
+    <input type="text" id="lastInput"><br>
+
+  <h2>Shirt Size</h2>
+
+  <select name="Shirt Size" id="shirtInput"><br>
+    <option value="XS">XS</option>
+    <option value="S">Sm</option>
+    <option value="M">Med</option>
+    <option value="L">Lg</option>
+    <option value="XL">XL</option>
+    <option value="XXL">XXL</option>
+    <option value="XXXL">XXXL</option>
+  </select>
+
+  <h2>Photo</h2>
+  <input type="file" accept="image/*" id="file-input" onchange="manualImageChange()" tabindex="-1">
+  Camera Selection:
+  <select id="cameraSelection" onchange="changeDevice()" tabindex="-1">
+    <option></option>
+  </select>
+  <div class="contentarea">
+  <div class="camera">
+    <video id="video">Video stream not available.</video>
+    <button id="startbutton">Take photo</button>
+  </div>
+  <canvas id="canvas">
+  </canvas>
+  <div class="output">
+    <img id="photo" alt="The screen capture will appear in this box.">
+  </div>
+  </div>
+
+
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="/__/firebase/5.10.1/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="/__/firebase/5.10.1/firebase-auth.js"></script>
+  <script src="/__/firebase/5.10.1/firebase-firestore.js"></script>
+  <script src="/__/firebase/5.10.1/firebase-storage.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+
+  <script src="scripts/functions.js"></script>
+  <script src="scripts/authentication.js"></script>
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/capture.js"></script>
+  <script src="scripts/edit.js"></script>
+  <script src="scripts/drm.js"></script>
+
+</body>
+</html>

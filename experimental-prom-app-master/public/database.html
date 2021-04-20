@@ -1,0 +1,71 @@
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bubblegum+Sans" />
+
+
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+</head>
+<body>
+    <div class="main_container">
+        <div class="header">
+            <div class="logo">
+                <img class="logo" src="images/underthestars_logo.png" />
+            </div>
+            <div class="topnav">
+                <a href="index.html"><div class="nav_button">Home</div></a>
+                <a href="edit.html"><div class="nav_button">Add Student</div></a>
+                <a href="database.html"><div class="nav_button">Search Database</div></a>
+                    
+            </div>
+            </div>
+
+  
+
+  <h1>Database Search</h1>
+
+  <h2>Ticket Number</h2>
+
+
+    <input type="text" id="ticketInput"><br>
+
+
+  <button type="button" onclick="retrieveStudent()">Search</button>
+  <br>
+  <span id="databaseOutput"></span>
+  Ticket Number: <span id="ticketNumber"></span>
+  <br>
+  Name: <span id="firstName"></span> <span id="lastName"></span>
+  <br>
+  Shirt Size: <span id="shirtSize"></span>
+  <br>
+  Checked in?
+  <button id="yesButtonTwo" type="button" onclick="yesHere()">Yes</button><button id="noButtonTwo" type="button" onclick="noHere()">No</button>
+  <br>
+  Shirt collected?
+  <button id="yesButton" type="button" onclick="yesShirt()">Yes</button><button id="noButton" type="button" onclick="noShirt()">No</button>
+  <br><img id="imageSpace" height="480px" width="640px">
+
+
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="/__/firebase/5.10.1/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="/__/firebase/5.10.1/firebase-auth.js"></script>
+  <script src="/__/firebase/5.10.1/firebase-firestore.js"></script>
+  <script src="/__/firebase/5.10.1/firebase-storage.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+
+  <script src="scripts/functions.js"></script>
+  <script src="scripts/authentication.js"></script>
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/database.js"></script>
+  <script src="scripts/drm.js"></script>
+
+</body>
+</html>
